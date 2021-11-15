@@ -1,82 +1,138 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Card from "../Components/Card";
+import Header from "../Components/Header";
+import Hero from "../Components/Hero";
 
 export default function Home() {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (
+        <>
+            <Head>
+                <title>Create Next App</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+            <main>
+                <Header />
+                <Hero />
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
+                <section className="overflow-hidden my-16">
+                    <h1 className="text-center font-Overpass text-2xl xl:text-4xl my-20 font-semibold tracking-wider text-gray-700">
+                        Designed for the future
+                    </h1>
+                    <section className="flex flex-col xl:flex-row-reverse space-y-8 xl:space-y-0 xl:space-x-8 items-center justify-center xl:items-start ">
+                        <img
+                            src="/images/illustration-editor-desktop.svg"
+                            alt="illustration-editor-desktop"
+                            className="hidden xl:block translate-x-[40%]"
+                        />
+                        <img
+                            src="/images/illustration-editor-mobile.svg"
+                            alt="illustration-editor-mobile.svg"
+                            className="xl:hidden"
+                        />
+                        <div className="px-8 xl:pt-52 max-w-2xl space-y-20">
+                            <Card
+                                heading="Introducing an extensible editor"
+                                paragraph="Blogr features an exceedingly intuitive interface which lets you
+                                          focus on one thing: creating content. The editor supports
+                                          management of multiple blogs and allows easy manipulation of
+                                          embeds such as images, videos, and Markdown. Extensibility with
+                                          plugins and themes provide easy ways to add functionality or
+                                          change the looks of a blog"
+                            />
+                            <Card
+                                heading="Robust content management "
+                                paragraph="Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control."
+                            />
+                        </div>
+                    </section>
+                </section>
 
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
+                <section
+                    id="phone"
+                    className="mt-52 mb-16 xl:my-16 bg-gradient-to-t xl:bg-gradient-to-l from-darkblue-700 to-darkblue-500  rounded-tr-[5rem] rounded-bl-[5rem] relative grid xl:grid-cols-2"
+                >
+                    <div />
+                    <div className="absolute top-[-100px] left-8 xl:left-20">
+                        <img
+                            src="/images/illustration-phones.svg"
+                            alt="phones"
+                            className="object-contain"
+                        />
+                    </div>
+                    <div className="mt-40 xl:mt-0 xl:my-16 text-center xl:text-left z-10 inline-flex flex-col justify-center mx-auto p-16 max-w-2xl min-h-[300px] ">
+                        <h2 className="text-white font-Overpass font-semibold text-3xl my-8">
+                            State of the Art Infrastructure
+                        </h2>
+                        <p className="text-white font-Overpass">
+                            With reliability and speed in mind, worldwide data
+                            centers provide the backbone for ultra-fast
+                            connectivity. This ensures your site will load
+                            instantly, no matter where your readers are, keeping
+                            your site competitive.
+                        </p>
+                    </div>
+                </section>
 
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
+                <section className="flex flex-col xl:flex-row space-y-8 xl:space-y-0 xl:space-x-8 items-center justify-center xl:items-start xl:my-64 mb-32">
+                    <img
+                        src="/images/illustration-laptop-desktop.svg"
+                        alt="illustration-editor-desktop"
+                        className="hidden xl:block translate-x-[-30%]"
+                    />
+                    <img
+                        src="/images/illustration-laptop-mobile.svg"
+                        alt="illustration-editor-mobile.svg"
+                        className="xl:hidden"
+                    />
+                    <div className="px-8 xl:pt-52 max-w-2xl space-y-20">
+                        <Card
+                            heading="Free, open, simple"
+                            paragraph="Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn."
+                        />
+                        <Card
+                            heading="Powerful tooling "
+                            paragraph="Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites."
+                        />
+                    </div>
+                </section>
+            </main>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
+            <footer className="bg-darkblue-900 text-white px-8 py-16 grid  xl:grid-cols-4 justify-items-center font-Overpass space-y-8 text-center xl:text-left rounded-tr-[5rem]">
+                <div>
+                    <img src="/images/logo.svg" alt="logo" className="mt-8" />
+                </div>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+                <div>
+                    <h2 className="font-bold mb-2 text-xl">Product</h2>
+                    <div className="space-y-1 font-light text-gray-200">
+                        <div>Overview</div>
+                        <div>Pricing</div>
+                        <div>Marketplace</div>
+                        <div>Features</div>
+                        <div>Integrations</div>
+                    </div>
+                </div>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
-    </div>
-  )
+                <div>
+                    <h2 className="font-bold mb-2 text-xl">Company</h2>
+                    <div className="space-y-1 font-light text-gray-200">
+                        <div>About</div>
+                        <div>Team</div>
+                        <div>Blog</div>
+                        <div>Careers</div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 className="font-bold mb-2 text-xl">Connect</h2>
+                    <div className="space-y-1 font-light text-gray-200">
+                        <div>Contact</div>
+                        <div>Newsletter</div>
+                        <div>Linkedin</div>
+                    </div>
+                </div>
+            </footer>
+        </>
+    );
 }
